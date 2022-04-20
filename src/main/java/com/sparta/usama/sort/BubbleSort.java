@@ -1,4 +1,4 @@
-package sort;
+package com.sparta.usama.sort;
 
 public class BubbleSort implements Sorter {
     private static int[] numberArray;

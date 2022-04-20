@@ -1,6 +1,6 @@
-package sort;
+package com.sparta.usama.sort;
 
-public class MergeSort implements Sorter{
+public class MergeSort implements Sorter {
 
     @Override
     public int[] sortArray(int[] inputArray) {
