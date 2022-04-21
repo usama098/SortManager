@@ -1,6 +1,4 @@
-package com.sparta.usama.Controller;
-
-import com.sparta.usama.sort.ArrayGenerator;
+package com.sparta.usama.controller;
 
 import java.util.Scanner;
 
@@ -11,6 +9,7 @@ public class SortManager {
     public static void start() {
 
         Scanner myObject = new Scanner(System.in);
-        inputLength = Integer.parseInt(myObject.nextLine());
+        inputLength = myObject.nextInt();
+
     }
 }

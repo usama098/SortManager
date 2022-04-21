@@ -17,14 +17,11 @@ public class BubbleSort implements Sorter {
         while (booleanFlag) {
             for (int i = 0; i < loopEnd; i++) {
                 if (BubbleSort.numberArray[i] > BubbleSort.numberArray[i + 1]) {
-                    booleanFlag = false;
                     swapElements(i);
                 }
             }
-            if (booleanFlag = true) {
-                break whileLoop;
-            }
             loopEnd--;
+            booleanFlag = false;
         }
         return numberArray;
     }

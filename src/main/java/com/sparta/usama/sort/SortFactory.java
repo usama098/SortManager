@@ -4,7 +4,7 @@ import java.util.Locale;
 
 public class SortFactory {
 
-    public Sorter getSort(String sortType) {
+    public static Sorter getSort(String sortType) {
 
         switch(sortType.toLowerCase()) {
             case "bubble":
