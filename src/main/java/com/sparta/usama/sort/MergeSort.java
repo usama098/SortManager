@@ -14,8 +14,6 @@ public class MergeSort implements Sorter {
         }
 
         return mergeSortArray(inputArray, 0, inputArray.length - 1);
-
-
     }
 
 

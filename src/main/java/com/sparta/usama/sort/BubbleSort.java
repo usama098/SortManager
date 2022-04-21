@@ -5,34 +5,16 @@ public class BubbleSort implements Sorter {
 
     @Override
     public int[] sortArray(int[] inputArray) {
-        BubbleSort.numberArray = inputArray;
+        int n = inputArray.length;
 
-        boolean booleanFlag = true;
-        int loopEnd = inputArray.length - 1;
-
-        if (inputArray == null || inputArray.length == 0) {
-            throw new IllegalArgumentException("why u passing me an empty array, are u done out?");
-        }
-        whileLoop:
-        while (booleanFlag) {
-            for (int i = 0; i < loopEnd; i++) {
-                if (BubbleSort.numberArray[i] > BubbleSort.numberArray[i + 1]) {
-                    swapElements(i);
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (inputArray[j] > inputArray[j + 1]) {
+                    // swap inputArray[j+1] and inputArray[j]
+                    int temp = inputArray[j];
+                    inputArray[j] = inputArray[j + 1];
+                    inputArray[j + 1] = temp;
                 }
-            }
-            loopEnd--;
-            booleanFlag = false;
-        }
         return numberArray;
     }
-
-    private static void swapElements(int index) {
-        int temp = BubbleSort.numberArray[index];
-        BubbleSort.numberArray[index] = BubbleSort.numberArray[index + 1];
-        BubbleSort.numberArray[index + 1] = temp;
-
-    }
-
-
-
 }
