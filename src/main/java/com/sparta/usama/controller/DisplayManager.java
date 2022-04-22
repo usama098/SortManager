@@ -9,9 +9,11 @@ public class DisplayManager {
         SortManager.start();
         int[] newArray = ArrayGenerator.generateIntArray(SortManager.inputLength);
         DisplayManager.showBubbleArray(newArray);
-        Sorter sBubbleArray = SortFactory.getSort("bubble");
+        Sorter sBubbleArray = SortFactory.getSort("merge");
         sBubbleArray.sortArray(newArray);
         DisplayManager.showBubbleArray(newArray);
+
+
 
     }
 
