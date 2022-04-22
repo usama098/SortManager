@@ -31,7 +31,7 @@ public class SortManager {
             try {
                 sortAlgorithm = myObject.nextLine();
                 sortAlgorithm = sortAlgorithm.toLowerCase();
-                if (sortAlgorithm == "bubble" || sortAlgorithm == "merge"){
+                if (sortAlgorithm.equals("bubble") || sortAlgorithm.equals("merge")){
                     validInput = true;
                 } else{
                     validInput = false;
