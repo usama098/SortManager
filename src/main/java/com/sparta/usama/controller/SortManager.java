@@ -35,6 +35,7 @@ public class SortManager {
                     validInput = true;
                 } else{
                     validInput = false;
+                    System.out.println("Invalid Entry!");
                 }
             } catch (InputMismatchException msg) {
                 System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());

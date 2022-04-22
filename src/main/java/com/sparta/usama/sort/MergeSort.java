@@ -3,10 +3,14 @@ package com.sparta.usama.sort;
 
 public class MergeSort implements Sorter {
 
+    public static long startTime = 0;
+    public static long endTime = 0;
 
     @Override
     public int[] sortArray(int[] inputArray) {
+        startTime = System.nanoTime();
         mergeArray(inputArray, inputArray.length);
+        endTime = System.nanoTime();
         return inputArray;
     }
 

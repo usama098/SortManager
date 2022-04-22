@@ -15,6 +15,14 @@ public class DisplayManager {
         Sorter sorter = SortFactory.getSort(SortManager.sortAlgorithm);
         sorter.sortArray(newArray);
         DisplayManager.showArray(newArray, true);
+        if(SortManager.sortAlgorithm.equals("bubble")){
+            System.out.println("time taken in ms to execute bubble algorithm: ");
+            System.out.println((BubbleSort.endTime - BubbleSort.startTime)/1000000);
+        } else {
+            System.out.println("time in ms taken to execute Merge algorithm: ");
+            System.out.println((MergeSort.endTime - MergeSort.startTime)/1000000);
+        }
+
 
 
 
