@@ -1,5 +1,7 @@
 package com.sparta.usama.controller;
 
+import com.sparta.usama.log.LoggingClass;
+
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
@@ -19,7 +21,8 @@ public class SortManager {
                 inputLength = myObject.nextInt();
                 validInput = true;
             } catch (InputMismatchException msg) {
-                System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());
+                System.out.println("Length input Mismatch Exception has occurred " + msg.getMessage());
+                LoggingClass.logger.error("Error thrown: ", msg);
             }
         }
     }
@@ -38,7 +41,8 @@ public class SortManager {
                     System.out.println("Invalid Entry!");
                 }
             } catch (InputMismatchException msg) {
-                System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());
+                System.out.println("Sorting algorithm input Mismatch Exception has occurred " + msg.getMessage());
+                LoggingClass.logger.error("Error thrown: ", msg);
             }
         }
     }
